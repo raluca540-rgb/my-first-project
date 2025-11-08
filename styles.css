@@ -104,6 +104,158 @@ footer {
     /* TODO: Try making the footer sticky at the bottom */
 }
 
+/* Chatbot Styles */
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    /* TODO: Try changing the chatbot position */
+}
+
+.chat-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    /* TODO: Customize the chat button color */
+}
+
+.chat-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+.chat-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    /* TODO: Try adjusting the chat window size */
+}
+
+.chat-window.active {
+    display: flex;
+}
+
+.chat-header {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* TODO: Match this color to your website theme */
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.bot-message,
+.user-message {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background-color: #e8f4f8;
+    margin-right: auto;
+    /* TODO: Customize bot message colors */
+}
+
+.bot-message p,
+.user-message p {
+    margin: 0;
+}
+
+.user-message {
+    background-color: #3498db;
+    color: white;
+    margin-left: auto;
+    /* TODO: Try different user message colors */
+}
+
+.chat-input-container {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    background-color: white;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+#chat-input:focus {
+    border-color: #3498db;
+}
+
+#send-button {
+    margin-left: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #2980b9;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
@@ -117,6 +269,18 @@ footer {
 
     main {
         padding: 1rem;
+    }
+
+    /* Chatbot responsive styles */
+    .chat-window {
+        width: 90vw;
+        height: 70vh;
+        right: 5vw;
+        bottom: 80px;
+    }
+
+    #chatbot-container {
+        right: 5vw;
     }
 
     /* TODO: Add more responsive styles for mobile devices */

@@ -64,5 +64,35 @@
         <p>&copy; 2024 My First Website. All rights reserved.</p>
         <!-- TODO: Update the year and add your name -->
     </footer>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container">
+        <!-- Chat Button -->
+        <button id="chat-button" class="chat-button">
+            <span id="chat-icon">💬</span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <h3>Chat Assistant</h3>
+                <!-- TODO: Change the chatbot name -->
+                <button id="close-chat" class="close-button">&times;</button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="bot-message">
+                    <p>Hi! I'm your virtual assistant. How can I help you today?</p>
+                    <!-- TODO: Customize the welcome message -->
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off">
+                <!-- TODO: Try changing the placeholder text -->
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
 </body>
 </html>
